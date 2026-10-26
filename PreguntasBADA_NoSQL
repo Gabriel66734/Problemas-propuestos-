@@ -1,0 +1,50 @@
+# Bases de Datos NoSQL
+
+**1. ¿Qué es una base de datos no relacional?**
+
+Es una base de datos que permite guardar información sin usar tablas relacionadas como las bases de datos tradicionales. Un ejemplo es MongoDB.
+
+**2. ¿Las bases de datos NoSQL permiten operaciones CRUD?**
+
+Sí, permiten crear, consultar, modificar y eliminar datos. Estas operaciones se conocen como CRUD.
+
+**3. ¿Qué es un Replica Set?**
+
+Es un grupo de servidores que tienen copias de los mismos datos. Sirve para evitar perder información y mantener el sistema funcionando si un servidor falla.
+
+**4. ¿Se escala verticalmente u horizontalmente?**
+
+Principalmente se destaca por el escalamiento horizontal, que consiste en agregar más servidores para repartir el trabajo. También puede escalar verticalmente, aumentando los recursos de un servidor.
+
+**5. ¿Cómo está compuesta una base de datos NoSQL de documentos?**
+
+Está compuesta por una base de datos, colecciones y documentos. Los documentos guardan la información en campos y valores. No usa tablas y filas como una base de datos relacional.
+
+**6. ¿Cuándo conviene usar bases de datos relacionales y NoSQL?**
+
+Las relacionales convienen cuando los datos están organizados y relacionados entre sí, por ejemplo, en bancos o sistemas contables. Las NoSQL convienen cuando se necesita más flexibilidad para guardar información, como en redes sociales o catálogos de productos.
+
+**7. Crear una base de datos de una veterinaria en MongoDB.**
+
+Primero creamos la base de datos y la colección de mascotas:
+
+
+use veterinaria
+
+db.createCollection("mascotas")
+```
+
+Después agregamos una mascota:
+
+
+db.mascotas.insertOne({
+  nombre: "Firulais",
+  especie: "Perro",
+  raza: "Labrador",
+  edad: 5,
+  dueño: "Juan Pérez",
+  vacunas: ["Rabia", "Séxtuple"]
+})
+```
+
+
